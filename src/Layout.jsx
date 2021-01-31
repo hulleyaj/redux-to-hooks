@@ -15,9 +15,10 @@ function Layout({ children, title }) {
           <Box display="flex" flexGrow="1">
             <Typography variant="h6">{title}</Typography>
           </Box>
-          <Box color="white">
+          <Box>
             <Button onClick={() => history.push('/home')}>Home</Button>
             <Button onClick={() => history.push('/render')}>Render</Button>
+            <Button onClick={() => history.push('/redux')}>Redux</Button>
           </Box>
         </Toolbar>
       </AppBar>

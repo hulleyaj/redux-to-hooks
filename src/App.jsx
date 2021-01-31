@@ -5,6 +5,7 @@ import Layout from './Layout';
 import './App.css';
 
 const Home = lazy(() => import('./pages/Home'));
+const Redux = lazy(() => import('./pages/Redux'));
 const Render = lazy(() => import('./pages/Render'));
 
 function Route({
@@ -30,6 +31,7 @@ function App() {
   return (
     <div className="App" style={{ flexGrow: 1 }}>
       <Switch>
+        <Route path="/redux" component={Redux} title="Redux" />
         <Route path="/render" component={Render} title="Render" />
         <Route path="/" component={Home} title="Redux to React" />
       </Switch>

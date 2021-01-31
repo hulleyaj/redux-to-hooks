@@ -1,11 +1,11 @@
 /* eslint-disable no-console */
 /* eslint-disable react/no-unescaped-entities */
-/* eslint-disable object-curly-newline */
 import React from 'react';
 import PropTypes from 'prop-types';
 import {
   Box, Button, Paper, Typography,
 } from '@material-ui/core';
+import BasicInstructions from '../components/BasicInstructions';
 
 function ComponentOne() {
   console.log('ComponentOne rendered');
@@ -71,18 +71,15 @@ function LiftedState() {
 function Render() {
   return (
     <Box display="flex" flexDirection="column">
-      <Box my={2} mx="auto">
-        <Box mb={4}>
-          <Typography variant="subtitle1">Open your dev tools to watch for console logs</Typography>
-          <Typography variant="subtitle1">Anytime one of the components renders, it will produce a log</Typography>
-        </Box>
+      <BasicInstructions />
+      <Box my={2}>
         <Typography variant="subtitle1">As you increment count on Component Two, it will rerender itself without rerendering Component One</Typography>
       </Box>
       <Box display="flex" justifyContent="center" flexWrap="wrap">
         <ComponentOne />
         <ComponentTwo />
       </Box>
-      <Box my={2} mx="auto">
+      <Box my={2}>
         <Typography variant="subtitle1">For Component Three and Four below, Four's count state is lifted to a parent component that holds both Three and Four</Typography>
         <Typography variant="subtitle1">As you increment count on Component Four, Three and Four with both be rerendered because of the lifted state</Typography>
       </Box>

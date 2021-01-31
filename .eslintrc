@@ -10,6 +10,7 @@
   "rules": {
     "import/no-named-as-default": "off",
     "import/no-extraneous-dependencies": ["error", {"devDependencies": ["**/*.test.js", "**/*.test.jsx", "./src/setupTests.js"]}],
+    "object-curly-newline": 0,
     "max-len": "off",
     "react/jsx-props-no-spreading": "off"
   },

@@ -2,17 +2,30 @@ import React from 'react';
 import ReactDOM from 'react-dom';
 import { BrowserRouter } from 'react-router-dom';
 import { createMuiTheme, ThemeProvider } from '@material-ui/core/styles';
-import theme from './theme';
+import { Provider as ReduxProvider } from 'react-redux';
+import { createStore, applyMiddleware } from 'redux';
+import { composeWithDevTools } from 'redux-devtools-extension';
+import thunk from 'redux-thunk';
+import reducers from './redux/reducers';
 import App from './App';
+import theme from './theme';
 import './index.css';
 import reportWebVitals from './reportWebVitals';
+
+const store = createStore(reducers, composeWithDevTools(
+  applyMiddleware(
+    thunk,
+  ),
+));
 
 ReactDOM.render(
   <React.StrictMode>
     <ThemeProvider theme={createMuiTheme(theme)}>
-      <BrowserRouter>
-        <App />
-      </BrowserRouter>
+      <ReduxProvider store={store}>
+        <BrowserRouter>
+          <App />
+        </BrowserRouter>
+      </ReduxProvider>
     </ThemeProvider>
   </React.StrictMode>,
   document.getElementById('root'),
