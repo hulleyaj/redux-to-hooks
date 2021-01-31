@@ -19,6 +19,7 @@ function Layout({ children, title }) {
             <Button onClick={() => history.push('/home')}>Home</Button>
             <Button onClick={() => history.push('/render')}>Render</Button>
             <Button onClick={() => history.push('/redux')}>Redux</Button>
+            <Button onClick={() => history.push('/redux-switch')}>Redux-Switch</Button>
           </Box>
         </Toolbar>
       </AppBar>

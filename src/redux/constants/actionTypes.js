@@ -1,3 +1,10 @@
 export const GET_POSTS_REQUEST = 'GET_POSTS_REQUEST';
 export const GET_POSTS_OK = 'GET_POSTS_OK';
 export const GET_POSTS_ERROR = 'GET_POSTS_ERROR';
+
+export const INCREASE_COUNT = 'INCREASE_COUNT';
+export const DECREASE_COUNT = 'DECREASE_COUNT';
+
+export const RANDOM_ONE = 'RANDOM_ONE';
+export const RANDOM_TWO = 'RANDOM_TWO';
+export const RANDOM_THREE = 'RANDOM_THREE';
