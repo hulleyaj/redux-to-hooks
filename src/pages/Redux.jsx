@@ -10,6 +10,7 @@ import {
 } from '@material-ui/core';
 import MuiAlert from '@material-ui/lab/Alert';
 import BasicInstructions from '../components/BasicInstructions';
+import ConnectedGetPosts from '../components/ConnectedGetPosts';
 import PostsTable from '../components/PostsTable';
 import { postsSelector } from '../redux/reducers/posts';
 import getPostsThunk from '../redux/thunks/getPosts';
@@ -30,7 +31,7 @@ function GetPosts({
         <Typography variant="h6">Get Posts</Typography>
         <PostsTable posts={posts} />
         <Box display="flex" justifyContent="flex-end" m={1}>
-          <Button variant="outlined" color="primary" onClick={getPosts}>Get Posts</Button>
+          <Button variant="outlined" color="primary" onClick={() => getPosts()}>Get Posts</Button>
         </Box>
       </Box>
     </Paper>
@@ -41,7 +42,7 @@ function RandomComponent() {
   console.log('RandomComponent rendered');
 
   return (
-    <Paper style={{ minWidth: 300, width: 500, height: 200, margin: 20, padding: 8 }}>
+    <Paper style={{ minWidth: 300, width: 500, maxHeight: 200, margin: 20, padding: 8 }}>
       <Typography variant="h6">Random Component</Typography>
     </Paper>
   );
@@ -58,6 +59,13 @@ function Redux(props) {
       <Box display="flex" justifyContent="center" flexWrap="wrap">
         <GetPosts {...props} />
         <RandomComponent />
+      </Box>
+      <Box my={2}>
+        <Typography variant="subtitle1">The following component is connected to redux directly without a parent</Typography>
+        <Typography variant="subtitle1">Redux is shared state.  This component should get posts per User Id, without affecting the Get Posts component</Typography>
+      </Box>
+      <Box display="flex" justifyContent="center">
+        <ConnectedGetPosts />
       </Box>
     </Box>
   );
