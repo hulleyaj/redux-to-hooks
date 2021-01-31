@@ -13,7 +13,7 @@ function CountComponent({
   decreaseCount,
   increaseCount,
 }) {
-  console.log('CountComponent rendered');
+  // console.log('CountComponent rendered');
 
   return (
     <Paper style={{ minWidth: 300, maxWidth: 500, margin: 20, padding: 8 }}>
@@ -59,7 +59,7 @@ function RandomComponent({
   randomTwo,
   randomThree,
 }) {
-  console.log('RandomComponent rendered');
+  // console.log('RandomComponent rendered');
 
   return (
     <Paper style={{ minWidth: 300, maxWidth: 500, margin: 20, padding: 8 }}>
