@@ -1,0 +1,17 @@
+{
+  "extends": ["airbnb", "airbnb/hooks"],
+  "env": {
+    "node": true,
+    "es6": true,
+    "browser": true,
+    "jest": true
+  },
+  "ignorePatterns": ["serviceWorker.js", "reportWebVitals.js"],
+  "rules": {
+    "import/no-named-as-default": "off",
+    "import/no-extraneous-dependencies": ["error", {"devDependencies": ["**/*.test.js", "**/*.test.jsx", "./src/setupTests.js"]}],
+    "max-len": "off",
+    "react/jsx-props-no-spreading": "off"
+  },
+  "parser": "babel-eslint"
+}
