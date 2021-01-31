@@ -21,7 +21,7 @@ function Layout({ children, title }) {
           </Box>
         </Toolbar>
       </AppBar>
-      <Box maxWidth={1600} marginX="auto">
+      <Box maxWidth={1600} mx="auto">
         {children}
       </Box>
     </>

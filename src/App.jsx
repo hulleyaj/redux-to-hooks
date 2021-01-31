@@ -38,7 +38,8 @@ function App() {
 }
 
 Route.propTypes = {
-  component: PropTypes.node.isRequired,
+  // eslint-disable-next-line react/forbid-prop-types
+  component: PropTypes.object.isRequired,
   title: PropTypes.string.isRequired,
 };
 
