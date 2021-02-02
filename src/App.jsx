@@ -9,6 +9,7 @@ const Hooks = lazy(() => import('./pages/Hooks'));
 const Redux = lazy(() => import('./pages/Redux'));
 const ReduxSwitch = lazy(() => import('./pages/ReduxSwitch'));
 const Render = lazy(() => import('./pages/Render'));
+const Reuse = lazy(() => import('./pages/Reuse'));
 
 function Route({
   component: Component,
@@ -28,14 +29,14 @@ function Route({
     />
   );
 }
-//events
-//fetch on mount
+// events
 // display none
 
 function App() {
   return (
     <div className="App" style={{ flexGrow: 1 }}>
       <Switch>
+        <Route path="/reuse" component={Reuse} title="Reusable Component" />
         <Route path="/hooks" component={Hooks} title="Hooks" />
         <Route path="/redux-switch" component={ReduxSwitch} title="Redux Switch" />
         <Route path="/redux" component={Redux} title="Redux" />
