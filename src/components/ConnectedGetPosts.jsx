@@ -20,7 +20,7 @@ function ConnectedGetPosts({
   posts,
   getPosts,
 }) {
-  //console.log('ConnectedGetPosts rendered');
+  // console.log('ConnectedGetPosts rendered');
 
   const [userId, setUserId] = React.useState('');
 

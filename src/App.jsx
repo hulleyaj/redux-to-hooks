@@ -4,6 +4,7 @@ import { Route as ReactRoute, Switch } from 'react-router-dom';
 import Layout from './Layout';
 import './App.css';
 
+const Context = lazy(() => import('./pages/Context'));
 const Home = lazy(() => import('./pages/Home'));
 const Hooks = lazy(() => import('./pages/Hooks'));
 const Redux = lazy(() => import('./pages/Redux'));
@@ -36,6 +37,7 @@ function App() {
   return (
     <div className="App" style={{ flexGrow: 1 }}>
       <Switch>
+        <Route path="/context" component={Context} title="Context" />
         <Route path="/reuse" component={Reuse} title="Reusable Component" />
         <Route path="/hooks" component={Hooks} title="Hooks" />
         <Route path="/redux-switch" component={ReduxSwitch} title="Redux Switch" />

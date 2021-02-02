@@ -8,6 +8,7 @@ import { composeWithDevTools } from 'redux-devtools-extension';
 import thunk from 'redux-thunk';
 import reducers from './redux/reducers';
 import App from './App';
+import { UserProvider } from './contexts/UserContext';
 import theme from './theme';
 import './index.css';
 import reportWebVitals from './reportWebVitals';
@@ -23,7 +24,9 @@ ReactDOM.render(
     <ThemeProvider theme={createMuiTheme(theme)}>
       <ReduxProvider store={store}>
         <BrowserRouter>
-          <App />
+          <UserProvider>
+            <App />
+          </UserProvider>
         </BrowserRouter>
       </ReduxProvider>
     </ThemeProvider>
