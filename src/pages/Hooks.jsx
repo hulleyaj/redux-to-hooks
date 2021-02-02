@@ -53,7 +53,15 @@ function GetPosts({ hasInput, instance }) {
               value={userId}
             />
           )}
-          <Button variant="outlined" color="primary" onClick={() => getPosts(userId)} style={{ marginLeft: 16 }}>Get Posts</Button>
+          <Button
+            variant="outlined"
+            color="primary"
+            onClick={() => getPosts(userId)}
+            style={{ marginLeft: 16 }}
+            disabled={hasInput && !userId}
+          >
+            Get Posts
+          </Button>
         </Box>
       </Box>
     </Paper>

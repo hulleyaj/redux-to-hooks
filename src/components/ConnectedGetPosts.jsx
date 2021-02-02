@@ -37,7 +37,7 @@ function ConnectedGetPosts({
             onChange={({ target: { value } }) => setUserId(value)}
             value={userId}
           />
-          <Button variant="outlined" color="primary" onClick={() => getPosts(userId)} style={{ marginLeft: 16 }}>Get Posts</Button>
+          <Button variant="outlined" color="primary" onClick={() => getPosts(userId)} style={{ marginLeft: 16 }} disabled={!userId}>Get Posts</Button>
         </Box>
       </Box>
     </Paper>

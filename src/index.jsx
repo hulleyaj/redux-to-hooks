@@ -8,6 +8,7 @@ import { composeWithDevTools } from 'redux-devtools-extension';
 import thunk from 'redux-thunk';
 import reducers from './redux/reducers';
 import App from './App';
+import { EventEmitter } from './contexts/EventContext';
 import { UserProvider } from './contexts/UserContext';
 import theme from './theme';
 import './index.css';
@@ -25,7 +26,9 @@ ReactDOM.render(
       <ReduxProvider store={store}>
         <BrowserRouter>
           <UserProvider>
-            <App />
+            <EventEmitter>
+              <App />
+            </EventEmitter>
           </UserProvider>
         </BrowserRouter>
       </ReduxProvider>
