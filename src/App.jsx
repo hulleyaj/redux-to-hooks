@@ -33,6 +33,12 @@ function Route({
   );
 }
 
+Route.propTypes = {
+  // eslint-disable-next-line react/forbid-prop-types
+  component: PropTypes.object.isRequired,
+  title: PropTypes.string.isRequired,
+};
+
 // display none
 
 function App() {
@@ -52,11 +58,5 @@ function App() {
     </div>
   );
 }
-
-Route.propTypes = {
-  // eslint-disable-next-line react/forbid-prop-types
-  component: PropTypes.object.isRequired,
-  title: PropTypes.string.isRequired,
-};
 
 export default App;

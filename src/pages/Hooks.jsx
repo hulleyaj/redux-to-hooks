@@ -26,6 +26,10 @@ function CountingComponent({ instance }) {
   );
 }
 
+CountingComponent.propTypes = {
+  instance: PropTypes.string.isRequired,
+};
+
 function GetPosts({ hasInput, instance }) {
   console.log(`GetPosts ${instance} instance rendered`);
 
@@ -68,6 +72,15 @@ function GetPosts({ hasInput, instance }) {
   );
 }
 
+GetPosts.defaultProps = {
+  hasInput: false,
+};
+
+GetPosts.propTypes = {
+  hasInput: PropTypes.bool,
+  instance: PropTypes.string.isRequired,
+};
+
 function Hooks() {
   return (
     <Box display="flex" flexDirection="column">
@@ -93,18 +106,5 @@ function Hooks() {
     </Box>
   );
 }
-
-CountingComponent.propTypes = {
-  instance: PropTypes.string.isRequired,
-};
-
-GetPosts.defaultProps = {
-  hasInput: false,
-};
-
-GetPosts.propTypes = {
-  hasInput: PropTypes.bool,
-  instance: PropTypes.string.isRequired,
-};
 
 export default Hooks;

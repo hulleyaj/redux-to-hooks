@@ -39,6 +39,13 @@ function GetPosts({
   );
 }
 
+GetPosts.propTypes = {
+  loading: PropTypes.bool.isRequired,
+  error: PropTypes.string.isRequired,
+  posts: PropTypes.arrayOf(PropTypes.object).isRequired,
+  getPosts: PropTypes.func.isRequired,
+};
+
 function RandomComponent() {
   console.log('RandomComponent rendered');
 
@@ -71,13 +78,6 @@ function Redux(props) {
     </Box>
   );
 }
-
-GetPosts.propTypes = {
-  loading: PropTypes.bool.isRequired,
-  error: PropTypes.string.isRequired,
-  posts: PropTypes.arrayOf(PropTypes.object).isRequired,
-  getPosts: PropTypes.func.isRequired,
-};
 
 const mapStateToProps = (state) => {
   const {

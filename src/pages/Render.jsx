@@ -56,6 +56,11 @@ function ComponentFour({ count, setCount }) {
   );
 }
 
+ComponentFour.propTypes = {
+  count: PropTypes.number.isRequired,
+  setCount: PropTypes.func.isRequired,
+};
+
 function LiftedState() {
   const [count, setCount] = React.useState(0);
 
@@ -86,10 +91,5 @@ function Render() {
     </Box>
   );
 }
-
-ComponentFour.propTypes = {
-  count: PropTypes.number.isRequired,
-  setCount: PropTypes.func.isRequired,
-};
 
 export default Render;

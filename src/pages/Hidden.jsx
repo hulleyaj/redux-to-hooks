@@ -23,6 +23,10 @@ function Component({ label }) {
   );
 }
 
+Component.propTypes = {
+  label: PropTypes.string.isRequired,
+};
+
 function Hidden() {
   const [tabBad, setTabBad] = React.useState(0);
   const [tabGood, setTabGood] = React.useState(0);
@@ -72,9 +76,5 @@ function Hidden() {
     </Box>
   );
 }
-
-Component.propTypes = {
-  label: PropTypes.string.isRequired,
-};
 
 export default Hidden;
