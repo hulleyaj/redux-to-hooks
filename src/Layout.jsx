@@ -24,6 +24,7 @@ function Layout({ children, title }) {
             <Button onClick={() => history.push('/reuse')}>Reuse</Button>
             <Button onClick={() => history.push('/context')}>Context</Button>
             <Button onClick={() => history.push('/events')}>Events</Button>
+            <Button onClick={() => history.push('/hidden')}>Hidden</Button>
           </Box>
         </Toolbar>
       </AppBar>

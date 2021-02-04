@@ -6,6 +6,7 @@ import './App.css';
 
 const Context = lazy(() => import('./pages/Context'));
 const Events = lazy(() => import('./pages/Events'));
+const Hidden = lazy(() => import('./pages/Hidden'));
 const Home = lazy(() => import('./pages/Home'));
 const Hooks = lazy(() => import('./pages/Hooks'));
 const Redux = lazy(() => import('./pages/Redux'));
@@ -38,6 +39,7 @@ function App() {
   return (
     <div className="App" style={{ flexGrow: 1 }}>
       <Switch>
+        <Route path="/hidden" component={Hidden} title="Hidden" />
         <Route path="/events" component={Events} title="Events" />
         <Route path="/context" component={Context} title="Context" />
         <Route path="/reuse" component={Reuse} title="Reusable Component" />
